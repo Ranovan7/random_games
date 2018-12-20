@@ -13,7 +13,7 @@ if __name__ == "__main__":
         print(f"Player {(turn % 2) + 1} Move")
         print("Vertical as first number, Horizontal as second number!")
         while True:
-            new_input = input("Select board number :")
+            new_input = input("Select board number : ")
             check = game.update(new_input, player[turn % 2])
             if check is True:
                 break
