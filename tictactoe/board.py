@@ -1,5 +1,6 @@
-
+'''module that stores the board object for tictactoe game'''
 class Board():
+    '''Board Class'''
 
     def __init__(self, n):
         '''Initializing the Board'''
@@ -69,7 +70,7 @@ class Board():
         is_draw = True
         for i in self.board:
             for j in i:
-                if j != "X" and j != "O":
+                if j not in ("X", "O"):
                     is_draw = False
                     break
             if not is_draw:
@@ -104,7 +105,7 @@ class Board():
                 return False
             else:
                 value = self.board[height][width]
-                if value is not "X" and value is not "O":
+                if value not in ("X", "O"):
                     self.board[height][width] = player
                     print("Correct input !\n")
                 else:
